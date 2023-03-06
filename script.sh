@@ -5,7 +5,6 @@ sudo ufw allow 'Nginx Full'
 echo 'server {
     listen 80;
     server_name iottrafficanalyzer iottrafficanalyzer.com;
-
     location / {
         proxy_pass http://127.0.0.1:8000/;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
